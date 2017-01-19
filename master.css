@@ -1,0 +1,34 @@
+body {
+    font-family: helvetica;
+    margin-left: 232px;
+}
+
+#sidebar {
+    background: ghostwhite;
+    border-right: 1px solid #ddd;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 200px;
+}
+
+#sidebar h2 {
+    text-align: center;
+    color: #777;
+}
+
+#sidebar h3 {
+    margin: 8px;
+}
+
+.link {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.link:hover {
+    background: #ddd;
+    cursor: pointer;
+}
