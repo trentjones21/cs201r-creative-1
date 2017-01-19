@@ -22,16 +22,14 @@ $(function() {
 });
 
 function hideAllSections() {
-    for (var i in sections) {
-        var section = sections[i];
+    $.each(sections, function(key, section) {
         $('#' + section.id).hide();
-    }
+    });
 }
 
 function populateSidebar() {
     var sidebar = $('#sidebar');
-    for (var i in sections) {
-        var section = sections[i];
+    $.each(sections, function(key, section) {
         sidebar.append("<div class='link' section='" + section.id + "'>" + section.name + "</div>");
-    }
+    });
 }
