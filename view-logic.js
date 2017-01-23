@@ -1,5 +1,6 @@
 // These sections will be added to the sidebar and display the element with id when clicked
 var sections = [
+    { name: 'Chessboard', id: 'chessboard' },
     { name: 'Pawn', id: 'pawn' },
     { name: 'Knight', id: 'knight' },
     { name: 'Rook', id: 'rook' },

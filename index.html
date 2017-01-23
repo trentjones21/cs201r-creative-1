@@ -3,22 +3,104 @@
 <head>
     <meta charset="utf-8">
     <title>Chess Tutorial</title>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="view-logic.js"></script>
     <link rel="stylesheet" href="master.css">
 </head>
 <body>
-    <div id='sidebar'>
-        <h2>Chess Tutor</h2>
-        <h3>Pick a section</h3>
+<div id='sidebar'>
+    <h2>Chess Tutor</h2>
+
+    <h3>Pick a section</h3>
+</div>
+<div id='content'>
+    <div id='chessboard'>
+        <h3>Chessboard</h3>
+        <img src="movements/Chess_Board.jpg"/>
+
+        <p>
+            This is how the chessboard looks like at the beginning of play.
+        </p>
     </div>
-    <div id='content'>
-        <div id='pawn'> Pawn </div>
-        <div id='knight'> Knight </div>
-        <div id='rook'> Rook </div>
-        <div id='bishop'> Bishop </div>
-        <div id='queen'> Queen </div>
-        <div id='king'> King </div>
+    <div id='pawn'>
+        <h3>Pawn</h3>
+        <img src="movements/Pawn_Move.jpg"/>
+
+        <p>
+            The pawn can only move forward one square or capture a piece (and thereby moving there) to the front
+            left or front right of it, it is the only piece that moves differently when capturing. As in, the pawn
+            can not capture a piece directly in front of it. Also, if the pawn has never moved before, it can move
+            forward two spaces on its first turn. However, if it does so, and if there's a pawn that could have captured
+            it if it had only moved forward one square. The opponent can still capture the pawn as if it were located
+            one square forward instead of two for one turn. When the pawn reaches the opposite side of the board, you
+            must exchange it for any piece except another pawn or king.
+        </p>
     </div>
+    <div id='knight'>
+        <h3>Knight</h3>
+        <img src="movements/Knight_Move.jpg"/>
+
+        <p>
+            A knight moves one squares up/ down/ left/ or right and then one square diagonally that shares the same
+            direction. Another way to describe it is that the knight disappears, and the go up/ down/ left/ or right
+            two squares, and then one square perpendicular from that square, and then place the knight there. Only
+            capturing the piece in its final location. A knight ignores any pieces in its movement path except its
+            final location. A knight can not go off the board.
+        </p>
+    </div>
+    <div id='rook'>
+        <h3>Rook</h3>
+        <img src="movements/Rook_Move.jpg"/>
+
+        <p>
+            A rook can move up/ down/ left/ or right any number of square with these constraints. It can not go off
+            the board. It can not travel through pieces (Traveling through means that it could land on it. The
+            knight stops upon capturing an opponent's piece).
+        </p>
+    </div>
+    <div id='bishop'>
+        <h3>Bishop</h3>
+        <img src="movements/Bishop_Move.jpg"/>
+
+        <p>
+            A bishop can only move diagonally any number of square with these constraints. It can not go off
+            the board. It can not travel through pieces (Traveling through means that it could land on it. The
+            bishop stops upon capturing an opponent's piece).
+        </p>
+    </div>
+    <div id='queen'>
+        <h3>Queen</h3>
+        <img src="movements/Queen_Move.jpg"/>
+
+        <p>
+            A queen can move like a bishop or a rook. As in, it can move up/ down/ left/ right/ or diagonally any
+            number of square with these constraints. It can not go off the board. It can not travel through pieces
+            (Traveling through means that it could land on it. The queen stops upon capturing an opponent's piece).
+        </p>
+    </div>
+    <div id='king'>
+        <h3>King</h3>
+        <img src="movements/King_Move.jpg"/>
+
+        <p>
+            A king can move up/ down/ left/ right/ or diagonally one square with these constraints. It can not go
+            off the board. If the king is being threatened (the opponent has a pieces that could capture
+            it if it was his/ her turn), you must make a move so that it is no longer threatened. If you are unable
+            to do so, you lose the game and you're opponent wins the game. Additionally the king can not travel to a
+            square that is being threatened. The king also has a special that it can do with the rook. If the king and a
+            rook (works with either rook) has not moved, there are no pieces between them, and the king, rook,
+            and squares between them are not threatened. Then you may move the king to the spot between the king and
+            rook where the knight started at the beginning of the game, and the rook at the neighboring square where
+            the bishop started at the beginning of the game. This is called Castling and counts as one move. As
+            stated earlier you win if you are threatening the king's square and the opponent is unable to make a
+            move to stop it. However, if you are not threatening the opponent's king, and the opponent is unable to
+            move the game is tied and called a stale mate. This could happen if you were threatening all of the
+            squares around the king, but not the king's square itself, and the opponent didn't have any other
+            pieces.
+        </p>
+    </div>
+    <span align="right">*Pictures found at http://www.intuitor.com/chess/</span>
+</div>
 </body>
 </html>
