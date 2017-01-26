@@ -6,14 +6,27 @@ var sections = [
     { name: 'Rook', id: 'rook' },
     { name: 'Bishop', id: 'bishop' },
     { name: 'Queen', id: 'queen' },
-    { name: 'King', id: 'king' }
+    { name: 'King', id: 'king' },
+    { name: 'Practice', id: 'practice'}
 ]
 
 $(function() {
     hideAllSections();
     populateSidebar();
 
+    var board2 = ChessBoard('board2', {
+        draggable: true,
+        dropOffBoard: 'trash',
+        sparePieces: true
+    });
+    board2.start();
+    $('#clearBtn').on('click', function() {
+        board2.clear()
+        board2.start()
+    });
+
     $('.link').click(function(link) {
+        $('#intro2').hide();
         hideAllSections();
         var sectionId = $(this).attr('section');
         if (sectionId) {

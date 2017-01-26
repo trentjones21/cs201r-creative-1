@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>Chess Tutorial</title>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src='chess/js/chessboard-0.3.0.min.js'></script>
+    <link href="chess/css/chessboard-0.3.0.min.css" rel="stylesheet">
     <script type="text/javascript" src="view-logic.js"></script>
     <link rel="stylesheet" href="master.css">
 </head>
@@ -15,6 +16,9 @@
     <h3>Pick a section</h3>
 </div>
 <div id='content'>
+    <div id='intro2'>
+        <h2>Select a topic on the left to get started</h2>
+    </div>
     <div id='chessboard'>
         <h3>Chessboard</h3>
         <img src="movements/Chess_Board.jpg"/>
@@ -100,7 +104,15 @@
             pieces.
         </p>
     </div>
-    <span align="right">*Pictures found at http://www.intuitor.com/chess/</span>
+    <div id='practice'>
+        <h3>Practice</h3>
+        <p>
+            Practice the moves below.  Click the "Restart" button to move the pieces back to their start position.  Feel free to switch to the other pages to review the rules.  We'll save your spot.
+        </p>
+        <div id="board2" style="width: 400px"></div>
+        <input type="button" id="clearBtn" value="Restart" />
+    </div>
+    <span align="right">*Pictures found at http://www.intuitor.com/chess/.  Chessboard found at http://chessboardjs.com/</span>
 </div>
 </body>
 </html>
